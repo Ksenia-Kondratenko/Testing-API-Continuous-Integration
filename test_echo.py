@@ -9,7 +9,7 @@ def test_get_request_with_parameters():
     response = requests.get(BASE_URL + "get", params=params)
 
     # Проверка статуса ответа
-    assert response.status_code == 400
+    assert response.status_code == 200
 
     # Проверка присутствия переданных параметров в ответе
     assert response.json()["args"] == params
