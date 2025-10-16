@@ -33,7 +33,7 @@ def test_post_request_with_json(common_data):
     response = requests.post(BASE_URL + "post", json=common_data)
 
     # Проверка статуса ответа
-    assert response.status_code == 400
+    assert response.status_code == 200
 
     # Проверка соответствия принятого и возвращённого JSON
     assert response.json()["json"] == common_data
